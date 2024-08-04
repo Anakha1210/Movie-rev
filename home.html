@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to swiper -->
+    <link rel="stylesheet" href="swiper-bundlecss.min.css" class="swiperstylesheet">
+    <!-- Box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <!-- Navigation -->
+        <div class="nav con">
+            <!-- Logo -->
+            <a href="home.html" class="logo">
+                Movie<span>Vel</span>
+            </a>
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder=" Search Movies">
+                <i class='bx bx-search-alt'></i>
+            </div>
+            <!-- User -->
+            <a href="#" class="user">
+                <img src="MM.jpg" alt="" class="user-img">
+            </a>
+            <!-- Navigation Bar -->
+            <div class="navbar">
+                <a href="#home" class="nav-link nav-active">
+                    <i class='bx bx-home-alt'></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+                <a href="explore.html" class="nav-link">
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">Explore</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bxs-film'></i>
+                    <span class="nav-link-title">Movies</span>
+                    <a href="#home" class="nav-link">
+                        <i class='bx bxs-heart'></i>
+                        <span class="nav-link-title">Favorite</span>
+                    </a>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home container" id="home sec1">
+        <!-- Home Image -->
+        <img src="homeimg.jpg" alt="" class="home-img">
+        <div class="home-text">
+            <h1 class="home-title">Varshangalkku Shesham</h1>
+            <p id="home-textp">2024</p>
+            <a href="#" class="watch-btn">
+                <i class='bx bxs-message-square-detail'></i>
+                <span id="watch-btn-span">Read review</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Popular Section -->
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Popular Movies</h2>
+        </div>
+        <!-- Content -->
+        <div id="reviews" class="movie-cards">
+            <!-- Movie cards will be dynamically inserted here by JavaScript -->
+            <div class="movie-posters">
+                <!-- Movie posters will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+    <!-- Link to Swiper -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- Link to JS -->
+    <script src="main.js"></script>
+    <!-- JavaScript to make movie cards -->
+    <script>
+        window.onload = function() {
+    const movieData = [
+    {
+        "title": "Premalu",
+        "releaseDate": " 2024",
+        "starRating": 4,
+        "genre": "Comedy/Romance",
+        "poster": "premalu.jpeg",
+        "review": "A Pleasing comedy filled romantic entertainer! \n\n Nothing special or innovative style of presenting, just Utilizing the Potential of Charm of actors to the perfect level ! \n\n Two combos of absolute Fun !one; naslen & mamitha baiju ; their chemistry is fabulous and their comic timing is impressive! \n\n Two naslen & sangeeth prathap ; their friendship bond presented is crazy geniune and chemistry between them is hilarious ; A treat to watch !!!\n\n Music is ok to me , technical sides too fine and Girish AD slowly becoming the master director of comic entertainment ,he delivered another amusing comedy entertainment! \n\n Over all this one surely hit the mark ! Sure shot super hit is loading!"
+    },
+    {
+        "title": "Birthmark",
+        "releaseDate": "2024",
+        "starRating": 3.5,
+        "genre": "Thriller/Mystery",
+        "poster": "birthmark.jpeg",
+        "review": "I saw the film after seeing the reviews of the film as it was mixed, the trailer is what made me go to theatres, I saw a beautiful story unfold in most aesthetic and great nuances, filmmaking is a visual medium and this film utilises it at its best in telling this simple story. It's one film, but most people after seeing the first half with interval break start to imagine a second half and when something not so coherent starts to happen they get disappointed, this film tries to break barriers in multiple ways but it's most organic and beautiful. Thank you for making this film the way it is made. See it open minded you will observe a story unfold."
+    },
+    {
+        "title": "Entebbe",
+        "releaseDate": " 2018",
+        "starRating": 1.9,
+        "genre": "Thriller/Action",
+        "poster": "entebbe.jpeg",
+        "review": "In July 1976, an Air France flight from Tel-Aviv to Paris gets hijacked on a stopover in Athens. The leaders of the group are Brigitte Kuhlmann (Rosamund Pike) and book publisher Wilfried Böse (Daniel Brühl). They are German revolutionaries trying to reclaim the initiative after their group faced setbacks at home. They are joined by Palestinians looking for revenge against the Jewish state. They force the plane to fly to Entebbe, Uganda where they have friendly unstable dictator in President Idi Amin. In Israel, defense minister Shimon Peres (Eddie Marsan) pushes for aggressive action while Prime Minister Yitzhak Rabin is cautious in the face of overwhelming odds. \n\n This true crime thriller is 2/3 great and 1/3 meh. Certainly, the hijacking is compelling and the two Germans are fascinating in their naive radicalism. They are over their heads as they slowly drown in the pool of their own making. Even a minor character like Idi Amin is terrific. The second great thread is the Israeli political leaders. Eddie Marsan is a great actor in a juicy role. The least compelling is the Israeli soldier and his dancer girlfriend Sarah. While her concern is still life and death, it pales in comparison to the other threads. The modern dance show is a disruption in the story flow especially in the climatic action third act. Cutting back and forth between the airport and the modern dance is simply a failed attempt at an artistic flourish. Doing the airport straight would be more intense and more compelling. Also, Netanyahu should probably be the leading soldier character in the movie rather than the kid with his girlfriend. Overall, I really like the 2/3 and the 1/3 doesn't sink it."
+    },
+    {
+        "title": "Avatar :The way of water",
+        "releaseDate": " 2022",
+        "starRating": 4.5,
+        "genre": "Sci-fi/Action",
+        "poster": "avatar2.jpeg",
+        "review": "The visual effects are amazing. But Cameron should be better than this.\n\n I'm a big fan of Mr Cameron. Not only for his directing skills, but also for his screenwriting skills. But this time he seemed to have missed the goal. I know he rarely does sequels. But is this the best he could do? The story has not changed anything compared to the previous episode. Repeated crises, repeated enemies, repeated conflicts,and wait a minute,WHAT? Even repeated Titanic. Are you serious?\n\n  As a director, he also did not reach his previous level. For a long time, the pace of the film felt too slow. Yes, the underwater scenes are phenomenal. But this is not the Blue Planet, this is a sci-fi action movie. At least it's what most audiences expect from the film,"
+    },
+    {
+        "title": "Pippa",
+        "releaseDate": " 2023",
+        "starRating": 3.5,
+        "genre": "War/Action",
+        "poster": "pippa.jpeg",
+        "review": "An immersive war film experience without the unnecessary chauvinistic nationalistic pomp and show-I enjoyed the film thoroughly. And yes! I wasn't really aware of the details of the war of '71, precisely the Battle of Garibpur, and how India helped East Pakistan (Bangladesh) attain liberation from West Pakistan. \n \nThe story of three siblings is straightforward and neat. The rift between the brothers was interesting. I am glad the makers didn't burden our protagonist with a love interest. The war scenes-WOW-beautifully designed. The locations where the film is shot contributed immensely. I believe not much of VFX has gone into the film. The tank battles could have been dealt with better. Underproduction? Small budget ? Maybe the reason, but whenever PIPPA was in the water, I was watching without a blink. Ishan worked for me as an actor mostly. Imaamulhaq was brilliant. \n The visuals are for the theatre, and cinematographer Priya Seth did an excellent job, especially during the war sequences; the camera immersed me. Director Raja Krishna Menon did commendably as well-the setup, the war sequences were well done. I had teary eyes more than once. \n\n  On the flip side, the pacing gets slow towards the end. The climax is underwhelming indeed. Edits at some places were abrupt; also, the makers could have shortened the film. The background score was changing tones, so it worked for me only in parts. AR Rahman sir didn't impress. I wish the film had seen the theaters. Pippa is a victory indeed."
+    },
+    {
+        "title": "Khufiya",
+        "releaseDate": "2023",
+        "starRating": 4,
+        "genre": "Thriller/Mystery",
+        "poster": "khufiya.jpeg",
+        "review": "As mostly observed in Hindi films, somehow they just don't know how to direct the foreign cast, either look overcooked or way too shabby. I'll give it to Khufiya, have managed that aspect pretty well. But that's just about it. It's a pale shadow of a Bharadwaj movie clan, so much so, that even Tabu looks slightly disinterested at times, which is the rarest of rare sights. Such a potent cast, and yet apart from Gabbi, nobody looked remotely scraped in their acting prowess. Gabbi, great in most parts, has surely provided a wider array of emotions, which, understandably looked a tad overwhelming in the second half. Assuming that your attention is still gripped till the interval, it shall be severely tested by the triviality and immaturity of the plot in the latter half. The best scene though belongs to Gabbi and her short dance sequence."
+    },
+    {
+        "title": "Wish",
+        "releaseDate": "2023",
+        "starRating": 3,
+        "genre": "Family/Fantasy",
+        "poster": "wish.jpeg",
+        "review": "Disney's 100th celebration falls flat with Wish, a film that struggles to maintain its own identity in the beloved Disney animated canon.\n\n  Unfortunately the problem with the film is the story is so underdeveloped and poorly executed. There are no stakes and the end result is a muddled theme, uneven pacing, and boring, flat characters. The film attempts to pay homage to older Disney classics and all the ingredients are there: lovable characters, a menacing, tongue-in cheek villain, cute animal sidekicks, and interesting concepts; but instead of 'showing' the character beats like older films, we are 'told' the story through bland dialogue and little action. Asha joins Disney's recent line of uninspiring 'adorkable' female protagonists, with no defining motivations or character growth. This quirky, clumsy character archetype for Disney princesses has been recycled for the past decade with Rapunzel, Anna, Moana, and Mirabel. The animation and sound don't fair better, with bland, pop-y music that feels like filler and a combination of animation styles that look unpolished. There is no 'Be Our Guest,' 'Part of your World,' 'Let it Go' or 'We Don't Talk about Bruno'.\n\n It's laughable that one of the lyrics to the song 'I'm a Star' in the movie is 'in this universe we are all shareholders.'' Wish remains harmless entertainment for families but is a painful reminder of what this film sets out to do: please investors. This film is a rushed, soulless, by the numbers paint-job with no innovation in storytelling or animation. A massive disappointment to Disney's legacy and a poor excuse for their 100th animated film."
+
+    },
+    {
+        "title": "Abraham Ozler",
+        "releaseDate": "2024 ",
+        "starRating": 4.4,
+        "genre": "Thriller/Mystery",
+        "poster": "ozler.jpeg",
+        "review": "The film ' Abraham Ozler ' directed by Midhun Manuel Thomas starring Jayaram , Jagdish , Anaswara etc.. was one of my highly anticipated films of the year and that might be the reason for me getting slightly disappointed after watching the film. It's a Medical Crime Thriller which is simple and predictable and goes with the same template we have seen in past years. The film's highlights were It's Background score produced by Midhun Mukundan and the build up for the cameo which was clap-worthy and impactful. Other than that the movie lacks the thrills and I strongly felt the character of Arjun Ashokan was very much wasted in this one. Jayaram has delivered a good performance and this is his comeback none the less. It's not Boring but it's not Thrilling either. It's an Above Average Thriller Drama."
+    },
+    {
+        "title": "Kho Gaye Hum Kahan",
+        "releaseDate": "2023 ",
+        "starRating": 3.7,
+        "genre": "Comedy/Drama",
+        "poster": "kho.jpeg",
+        "review": "Ahana, Neil and Imaad are three friends in their 20s trying to find meaning in the digital age. They lean on each other as they navigate complexities of relationships and self-discovery."
+    },
+    {
+        "title": "Philip's",
+        "releaseDate": "2023",
+        "starRating": 3.6,
+        "genre": "Drama",
+        "poster": "philips.jpeg",
+        "review": "I did enjoy this movie. The lead characters were great and the way they portrayed the message was superb. Innocent had an important role to play in the movie and he executed it perfectly. Mollywood is gonna severely miss him.\n\n  The film is set in Bangalore. The production design was nice. I enjoyed the good combination of the artists, there was no artificiality anywhere in the movie. It's good to see Noble get a good role. He can be a good actor if he gets some good roles. Even Roshann Mathew had a start like this and he kept on improving after each movie."
+    },
+    {
+        "title": "Merry Christmas",
+        "releaseDate": "2024",
+        "starRating": 4.3,
+        "genre": "Mystery/Thriller",
+        "poster": "merry.jpeg",
+        "review": "Serpentine twists and turns. Nail-biting suspense and tension-filled moments that keep you on edge. A masterstroke finale... Director SriramRaghavan delivers an out-of-the-box, absorbing tale that teases your mind, besides keeping you engaged and entertained. MerryChristmas could've done with faster pacing and slight trimming for an enhanced impact... Also, this film depends entirely on a strong word of mouth, so don't expect fireworks at the BO on arrival.\n\n In the coming days, one word that's sure to be associated with Merry Christmas is 'slow burn'. In the past few years, we, as an audience, have become so accustomed to a fast-paced narrative that anything remotely unhurried feels like it's demanding a lot from us. In Merry Christmas, Sriram Raghavan takes his own sweet time to tell the tale of a woman in an unhappy marriage and a man with a mysterious past while also making sure that his characters have abundant time to breathe, talk, and even go for a walk around town. \n \n On the whole, MERRY CHRISTMAS is a well-made thriller and is laced with a fine performance by Vijay Sethupathi. At the box office, it'll need a strong word of mouth to succeed as it appeals only to the multiplex audience in the urban areas."
+
+    },
+    {
+        "title": "Past Lives",
+        "releaseDate": "2023",
+        "starRating": 4.8,
+        "genre": "Romance/Drama",
+        "poster": "pastlives.jpeg",
+        "review": "love unfulfilled couldnt turn into marriage although satisfied and heart breaking at same time They spent countless time re-living their lives through the internet, but eventually, Nora realizes this has been holding her back For anyone who has gone through long distance relationships, loved and lost and then reconnected in some way, what follows in the film may bring up raw feelings you are self-aware of your life, you tend to consider these possibilities. Though the movie lingers slowly, the poetic nature of their silence will either calm you or make you frustrated that it hasn't moved faster do not recommend this to everyone, but if you love movies like Before Sunrise trilogy or the Irish movie Once or Eternal Sunshine of a Spotless mind You will love this one too it's a clean and emotional film. I usually don't enjoy emotional films when they feel artificial, but this film managed to portray even the unlikely scenarios realistically."
+
+    }
+];
+    const reviewsSection = document.getElementById('reviews');
+    let rowDiv;
+
+    movieData.forEach((movie, index) => {
+        if (index % 4 === 0) {
+            // Create a new row container for every 4th movie
+            rowDiv = document.createElement('div');
+            rowDiv.classList.add('row');
+            reviewsSection.appendChild(rowDiv);
+        }
+        // Create movie card
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('movie-card');
+        // Add movie poster
+        const posterImg = document.createElement('img');
+        posterImg.src = movie.poster;
+        posterImg.alt = `${movie.title} Poster`;
+        cardDiv.appendChild(posterImg);
+        // Add movie details
+        const title = document.createElement('h3');
+        title.textContent = movie.title;
+        cardDiv.appendChild(title);
+        const rating = document.createElement('p');
+        rating.classList.add('rating');
+        rating.textContent = `Rating: ${movie.starRating} / 5`;
+        cardDiv.appendChild(rating);
+        const releaseDate = document.createElement('p');
+        releaseDate.textContent = `Release Date: ${new Date(movie.releaseDate).toLocaleDateString()}`;
+        cardDiv.appendChild(releaseDate);
+        const genre = document.createElement('p');
+        genre.textContent = `Genre: ${movie.genre}`;
+        cardDiv.appendChild(genre);
+        // Add event listener to show modal on click
+        cardDiv.addEventListener('click', () => {
+            showModal(movie.title, movie.review); // Pass movie title and review to showModal function
+        });
+        rowDiv.appendChild(cardDiv);
+    });
+    function showModal(title, review) {
+        // Create modal overlay
+        const overlay = document.createElement('div');
+        overlay.classList.add('modal-overlay');
+        document.body.appendChild(overlay);
+        // Create modal box
+        const modal = document.createElement('div');
+        modal.classList.add('modal-box');
+        // Create and add movie title
+        const modalTitle = document.createElement('h2');
+        modalTitle.textContent = title;
+        modal.appendChild(modalTitle);
+        // Create and add movie review
+        const modalReview = document.createElement('p');
+        modalReview.textContent = review;
+        modal.appendChild(modalReview);
+        // Create and add close button
+        const closeButton = document.createElement('button');
+        closeButton.textContent = 'Close';
+        closeButton.classList.add('close-button');
+        closeButton.addEventListener('click', () => {
+            document.body.removeChild(overlay);
+            document.body.removeChild(modal); // Remove modal box when closed
+        });
+        modal.appendChild(closeButton);
+        document.body.appendChild(modal); // Append modal box to document body
+    }
+};
+const reviewIcon = document.querySelector('.bx.bxs-message-square-detail');
+    reviewIcon.addEventListener('click', () => {
+        const title = document.getElementById('movie-title').textContent;
+        const review = document.getElementById('movie-review').textContent;
+        showModal(title, review);
+    }
+);
+    </script>
+</body>
+</html>

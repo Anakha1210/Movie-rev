@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2a;
+    background-image: "signingbg.jpeg";
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.sign-in-form {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.sign-in-form h1 {
+    margin-bottom: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: #ffb43a;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    color: #fcfeff;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fcfeff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1084e8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2730db;
+}
+
+.message {
+    margin-top: 20px;
+    color: #fcfeff;
+}
+
+.message a {
+    color: #fcfeff;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+.container {
+    position: relative;
+}
+
+.logo {
+    font-size: 1.4rem;
+    color: #fcfeff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0 0 10px; /* Adjust margins as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.logo span{
+    color: #ffb43a;
+    
+}
+
+        /* CSS styles */
+    </style>
+</head>
+<body>
+    <div class="nav con">
+        <!-- Logo -->
+        <a href="home.html" class="logo">
+            Movie<span>Vel</span>
+        </a>
+    </div>
+    <div class="container">
+        <form class="sign-in-form" onsubmit="authenticate(event)">
+            <h1>Sign In</h1>
+            <div class="input-group">
+                <label for="Username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="Password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Sign In</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+
+    <script>
+        function authenticate(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Retrieve username and password values
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Define regular expressions for username and password validation
+    const usernameRegex = /^[a-zA-Z0-9_]{3,}$/; // Username must contain at least 3 alphanumeric characters or underscores
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{3,}$/; // Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, 1 special character, and be at least 8 characters long
+
+    // Check if the provided username matches the regex
+    if (!username.match(usernameRegex)) {
+        // Username does not meet requirements, display an error message
+        alert('Username must contain at least 3 alphanumeric characters or underscores.');
+        return; // Exit the function without further processing
+    }
+
+    // Check if the provided password matches the regex
+    if (!password.match(passwordRegex)) {
+        // Password does not meet requirements, display an error message
+        alert('Password must contain at least 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 3 characters long.');
+        return; // Exit the function without further processing
+    }
+
+    // Define an array of user credentials
+    const users = [
+        { username: 'Aaa', password: 'Pass1@' },
+        { username: 'Bbb', password: 'Pass2@' },
+        { username: 'Ccc', password: 'Pass3@' },
+        // Add more user credentials as needed
+    ];
+
+    // Check if the provided credentials match any of the expected credentials
+    const authenticatedUser = users.find(user => user.username === username && user.password === password);
+
+    if (authenticatedUser) {
+        // Authentication successful, redirect to a new page or display a success message
+        alert('Authentication successful! Redirecting to homepage...');
+        window.location.href = 'home.html'; // Redirect to homepage
+    } else {
+        // Authentication failed, display an error message
+        alert('Invalid username or password. Please try again.');
+    }
+}
+
+
+    </script>
+</body>
+</html>
